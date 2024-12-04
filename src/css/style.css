@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    min-height: 100%;
     background: linear-gradient(120deg, #FF00FF, #FF69B4, #F9629F) no-repeat;
     background-size: 200% 200%;
     animation: gradientAnimation 6s ease infinite;
@@ -8,7 +8,7 @@ html {
 body {
     max-width: 1220px;
     margin: 0 auto;
-    height: 100%;
+    min-height: 100%;
 }
 
 @keyframes gradientAnimation {
@@ -25,11 +25,27 @@ body {
     }
 }
 
+
+
+.cabecalho .menu{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.cabecalho .menu li a {
+    transition: 0.3s ease-in-out;
+    font-size: 25px;
+    padding: 8px 4px;
+    gap: 5px;
+    color: black;
+}
+
 .title{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    margin: 25px 0;
 }
 
 .title h1{
@@ -63,7 +79,6 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    /* height: 400px; */
 }
 
 
@@ -83,21 +98,113 @@ body {
 .tempo-relacionamento .infomacao h2{
     text-transform: uppercase;
     color: #FCEFFE ;
-    font-family: "Roboto", serif;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 15px;
 }
 
 .tempo-relacionamento .infomacao .contagem{
-    font-size: 20px;
-    font-family: "Roboto", serif;
-    font-weight: 500;
-    color: rgb(47, 15, 130);
-    width: 400px;
-    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: rgba(47, 15, 130, 0.9); 
+    text-align: center;
+    padding: 15px 25px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(255, 105, 180, 0.9));
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    animation: fadeIn 1s ease-in-out; 
     
 }
 
+.tempo-relacionamento .infomacao .contagem::before{
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    filter: blur(10px); 
+    animation: shine 4s infinite alternate; 
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shine {
+    from {
+        opacity: 0.3;
+        transform: scale(1.2);
+    }
+    to {
+        opacity: 0.6;
+        transform: scale(1.4);
+    }
+}
+
 .tempo-relacionamento .infomacao .coracao{
-    width: 50px;
-    height: 50px ;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hr{
+    max-width: 350px;
+    margin: auto;
+}
+
+.mensagem {
+    width: 90%; 
+    max-width: 600px; 
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px); 
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out; 
+}
+
+.mensagem p {
+    font-family: "Dancing Script", cursive; 
+    font-size: 1.3rem; 
+    line-height: 1.5rem; 
+    color: black; 
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
