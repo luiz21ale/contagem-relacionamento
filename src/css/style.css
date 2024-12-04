@@ -39,8 +39,8 @@ body {
 }
 
 .swiper {
-    width: 200px;
-    height: 400px;
+    width: 300px;
+    height: 420px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
@@ -64,4 +64,40 @@ body {
     object-fit: cover;
     border-radius: 20px;
     /* height: 400px; */
+}
+
+
+/* SECTION TEMPO DE RELACIONAMENTO*/
+
+.tempo-relacionamento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.tempo-relacionamento .infomacao{
+    text-align: center;
+}
+.tempo-relacionamento .infomacao h2{
+    text-transform: uppercase;
+    color: #FCEFFE ;
+    font-family: "Roboto", serif;
+    margin-bottom: 15px;
+}
+
+.tempo-relacionamento .infomacao .contagem{
+    font-size: 20px;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    color: rgb(47, 15, 130);
+    width: 400px;
+    padding: 20px;
+    
+}
+
+.tempo-relacionamento .infomacao .coracao{
+    width: 50px;
+    height: 50px ;
 }

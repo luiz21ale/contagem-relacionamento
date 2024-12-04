@@ -1,3 +1,5 @@
+import { contagemDetempo } from "./contagem.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.swiper', {
         loop: true,
@@ -11,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         autoplay: {
             delay: 3000,
-        }
+        }   
     });
+    
 });
+
+contagemDetempo()
